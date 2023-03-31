@@ -190,14 +190,14 @@ func (o *output) writeSigmaIterations(iters []sigmaIteration) {
 }
 
 func (o *output) writeP(p float64) {
-	if _, err := fmt.Fprintf(o.file, "Плотность газа p = %f\n", p); err != nil {
+	if _, err := fmt.Fprintf(o.file, "Плотность газа p = %f кг/м^3\n", p); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
 }
 
 func (o *output) writeZ(z float64) {
-	if _, err := fmt.Fprintf(o.file, "Коэффициент сжимаемости z = %f кг/м^3\n", z); err != nil {
+	if _, err := fmt.Fprintf(o.file, "Коэффициент сжимаемости z = %f\n", z); err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(1)
 	}
