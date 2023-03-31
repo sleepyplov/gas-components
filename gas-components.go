@@ -19,7 +19,7 @@ func main() {
 		for _, c := range allComponents {
 			fmt.Fprintf(&sb, "\t%s\n", c.name)
 		}
-		sb.WriteString("\n\tt - температура в К\n\tp - давление в МПа\n\n")
+		sb.WriteString("\n\tt - температура в °С\n\tp - давление в МПа\n\n")
 		sb.WriteString("Доли компонентов указываются в процентах.\nБольшие/маленькие буквы, точка или запятая в дробях - без разницы.\n\n")
 		sb.WriteString("Gas Components - made by Sleepy Plov with ♥\n")
 		fmt.Fprint(flag.CommandLine.Output(), sb.String())
